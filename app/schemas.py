@@ -1,3 +1,5 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -9,3 +11,18 @@ class SearchRequest(BaseModel):
 
 class SearchResponse(BaseModel):
     data: dict
+
+
+class SearchResult(BaseModel):
+    title: str
+    url: str
+    content: str
+
+
+class ScrapedResult(SearchResult):
+    full_content: str
+
+
+class ClassifiedResult(ScrapedResult):
+    sentiment: Literal["positive", "negative", "noise"]
+    reason: str
