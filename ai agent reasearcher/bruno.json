@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ai agent reasearcher",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
