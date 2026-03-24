@@ -21,6 +21,7 @@ class SearchResult(BaseModel):
 
 class ScrapedResult(SearchResult):
     full_content: str
+    scraped: bool
 
 
 class ClassifiedResult(ScrapedResult):
